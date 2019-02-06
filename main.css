@@ -136,3 +136,7 @@ a.item{
     color: #D1BF6C;
 
 }
+.ui.card > .image:not(.ui) > img, .ui.cards > .card > .image:not(.ui) > img {
+  height: 335px;
+  width:100%;
+}
