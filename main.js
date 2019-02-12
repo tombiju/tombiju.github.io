@@ -17,21 +17,23 @@ $( document ).ready(function() {
         });
     },1000)
            
-         
-
-   
-   
     var audioPlayer = document.getElementById("myAudio"); 
+    audioPlayer.volume = 0.05;
+    audioPlayer.currentTime = 12;
+    audioPlayer.play();
     var togglePlay = document.getElementById("togglePlay");
+    var audioIcon = document.getElementById("toggle-icon");
     function playAudio() { 
         if(audioPlayer.duration > 0 && !audioPlayer.paused){
-            audioPlayer.pause(); 
+            audioPlayer.pause();
+            $("#togglePlay").removeClass("fas fa-volume-up").addClass("fas fa-volume-mute");
         }else{
             audioPlayer.play();
+            $("#togglePlay").removeClass("fas fa-volume-mute").addClass("fas fa-volume-up");
         }
     } 
-    
     togglePlay.addEventListener("click", playAudio);
+    
     $('.right')
     .on('click', function() {
         $('.slide')
@@ -72,5 +74,9 @@ $( document ).ready(function() {
         let computed_id =  "#" + $(this).attr('id') + "-modal";
         $(computed_id).modal('show');
     });
+
+    var fs = require('fs');
+    var files = fs.readdirSync('images/gallery');
+    console.log(files);
         
   });
