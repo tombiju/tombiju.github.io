@@ -31,6 +31,8 @@
       </div>
       
     </div>
+    <!-- Audio autoplay override for Chrome -->
+    <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
     <audio id="myAudio" loop>
       <source src="title_track.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
@@ -46,7 +48,7 @@
     </div> -->
     
     <div id="hero-image">
-        <img class="ui massive image center" src="images/cover_image.jpg" style="visibility: hidden;" > 
+        <img class="ui big image center" src="images/cover_image.jpg" style="visibility: hidden;" > 
         <div id="hero-text">
           <h1>We are KV Beats</h1>
           <p>Let us entertain you!</p>
@@ -255,20 +257,40 @@
             <div class="ui text container slides">
               <i class="big left angle icon"></i>
               <i class="big right angle icon"></i>
-              <div class="inverted shadow blurred image slide active" style="background-image: url(images/bros.jpg);">
+              <div class="inverted shadow blurred image slide active" style="background-image: url(images/gallery/bros.jpg);">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/fam.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/fam.jpg);">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/beats.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/beats.jpg);">
               </div>
-              <div class="inverted shadow blurred image slide" style="background-image: url(images/church.jpg);">
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/church.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/kna_flex.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/purple_bros.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/brown_bros.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/drums.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/behind_the_scenes.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/jammin_out.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/pink.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/manu_entrance.jpg);">
+              </div>
+              <div class="inverted shadow blurred image slide" style="background-image: url(images/gallery/group.jpg);">
               </div>
             </div>
           </div>
      
          <h3 class="ui blue header">Video</h3>
-         <div class = "container"> <video id ='vid' width = "700" src="video/work_sample.mp4" controls>
-         </video></div>
+         <div class = "container"> 
+          <video id ='vid' width = "700" preload="metadata" controls>
+            <source src="video/work_sample.mp4#t=0.1" type="video/mp4">
+          </video></div>
         
 
         <h1 class="ui horizontal header divider">

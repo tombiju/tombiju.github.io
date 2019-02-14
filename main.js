@@ -1,5 +1,6 @@
 $( document ).ready(function() {
-
+    var slideshowImages = ["cover_image.jpg", "manu_center.jpg", "syro_celebs.jpg", "cool.jpg", "shuffle.jpg", "wedding_holla.jpg"]
+    var slideshowPositions = {cover_image: "center", manu_center: "initial", syro_celebs:"initial", cool:"center", shuffle:"center", wedding_holla:"initial"};
     setTimeout(function(){ 
         $("body").fadeOut(1000, function() {
             $("body").css("background-image", "none");
@@ -75,8 +76,18 @@ $( document ).ready(function() {
         $(computed_id).modal('show');
     });
 
-    var fs = require('fs');
-    var files = fs.readdirSync('images/gallery');
-    console.log(files);
-        
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+    let previousIndex = 0;
+    window.setInterval(function(){
+        let index = getRandomInt(slideshowImages.length);
+        do {
+            index = getRandomInt(slideshowImages.length);
+        }while (index == previousIndex);
+        previousIndex = index; 
+        document.getElementById("hero-image").style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/slideshow/"+slideshowImages[index]+"')";
+        document.getElementById("hero-image").style.backgroundPosition = slideshowPositions[slideshowImages[index].substring(0, slideshowImages[index].indexOf("."))];  
+    }, 5000);
+
   });
