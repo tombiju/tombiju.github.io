@@ -1,6 +1,6 @@
 $( document ).ready(function() {
-    var slideshowImages = ["cover_image.jpg", "manu_center.jpg", "syro_celebs.jpg", "cool.jpg", "shuffle.jpg", "wedding_holla.jpg"]
-    var slideshowPositions = {cover_image: "center", manu_center: "initial", syro_celebs:"initial", cool:"center", shuffle:"center", wedding_holla:"initial"};
+    var slideshowImages = ["cover_image.jpg", "manu_center.jpg", "syro_celebs.jpg", "cool.jpg", "shuffle.jpg", "wedding_holla.jpg", "focus.jpg"]
+    var slideshowPositions = {cover_image: "center", manu_center: "initial", syro_celebs:"initial", cool:"center", shuffle:"center", wedding_holla:"initial", focus: "center"};
     setTimeout(function(){ 
         $("body").fadeOut(1000, function() {
             $("body").css("background-image", "none");
