@@ -76,6 +76,14 @@ $( document ).ready(function() {
         $(computed_id).modal('show');
     });
 
+    $('.ui.yellow.animated.button').click(function(){
+        $('.ui.basic.modal')
+            .modal('show')
+        ;
+    });
+
+   
+
     function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }

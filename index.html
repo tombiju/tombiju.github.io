@@ -18,7 +18,7 @@
   <body>
     <div id ="cover-screen"></div>
     <div id = "main">
-    <div class="ui top fixed menu" id= "dark-mode">
+    <div class="ui stackable top menu" id= "dark-mode">
       <a class="item" id ="logo-frame" onClick="window.location.href=window.location.href">
         <img src="images/logo_words_only.png">
       </a>
@@ -407,8 +407,15 @@ Kochuveettil Beats is recognized across the globe for bringing the passion and p
             <a href="#" id = "contact">Contact</a>
         </h1>
         <h3 class="ui blue header">Reach Out to Us</h3>
-        <p><i class="envelope outline icon"></i> Kochuveettilbeats@gmail.com</p>
-        <!-- <p><i class="phone icon"></i> 1-800-KVBEATS</p> -->
+        <p><i class="envelope outline icon"></i> Kochuveettilbeats@gmail.com
+        <div class="ui yellow animated button" tabindex="0">
+            <div class="visible content">Send</div>
+            <div class="hidden content">
+              <i class="paper plane icon"></i>
+            </div>
+        </div>
+        </p>
+        <p><i class="phone icon"></i> 847-612-0606</p>
         <p><i class="comments outline icon"></i> 
           <a  href = "https://www.facebook.com/kveettilbeats/"> <button class="ui facebook button">
             <i class="facebook icon"></i>
@@ -438,7 +445,39 @@ Kochuveettil Beats is recognized across the globe for bringing the passion and p
             Wedding Wire
           </button></a>
         </p>
-        
+        <div class="ui basic modal">
+          <div class="ui icon header">
+            <i class="airplane icon"></i><i class="paper plane outline icon"></i>
+            Send a Message!
+          </div>
+          <form class = "ui form" enctype="text/plain" method="POST" action="mailto:kochuveettilbeats@gmail.com">
+          <div class="content container">
+            <p>
+              Your First Name: <input type="text" name="first_name"><br>
+            </p>
+            <p>
+              Your Last Name: <input type="text" name="last_name"><br>
+            </p>
+            <p>
+              Comments: <textarea rows="5" cols="30" name="comments"></textarea>
+            </p>
+              
+          </div>
+          <div class="actions">
+            <p>
+            <div class="ui red basic cancel inverted button">
+              <i class="remove icon"></i>
+              Close
+            </div>
+            <input type="submit" value = "Send" class = "ui ok green inverted button">
+            </form>
+          </p>
+          </div>
+        </div>
+
+
+
+
 
       </div>
     </div>
