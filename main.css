@@ -22,6 +22,7 @@ p>ul>li {
 
 a.item {
   color: #D1BF6C;
+
 }
 
 #dark-mode {
@@ -223,4 +224,16 @@ h1>a {
   color: white;
   text-shadow: none;
   background-image: none;
+}
+
+.ui.form {
+  text-align: center;
+}
+
+.ui.contact {
+  text-align: center;
+}
+
+.ui.blue.header {
+  color: rgb(209, 191, 108) !important;
 }
